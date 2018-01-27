@@ -218,7 +218,7 @@ export default class RichTextEditor extends Component {
                 value={this.state.linkTitle}
               />
             </View>
-            <Text style={[styles.inputTitle, { marginTop: 10 }]}>URL</Text>
+            <Text style={[styles.inputTitle, { marginTop: 10 }]}>链接</Text>
             <View style={styles.inputWrapper}>
               <TextInput
                 style={styles.input}
