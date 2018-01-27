@@ -181,7 +181,7 @@ export default class RichTextToolbar extends Component {
           this.props.onPressAddImage();
         }
         break;
-      case closeKeyboard:
+      case actions.closeKeyboard:
         Keyboard.dismiss();
         break;
     }
