@@ -90,7 +90,7 @@ export default class RichTextEditor extends Component {
     const {marginTop = 0, marginBottom = 0} = this.props.style;
     const spacing = marginTop + marginBottom + top + bottom;
 
-    const editorAvailableHeight = Dimensions.get('window').height - keyboardHeight - spacing;
+    const editorAvailableHeight = -1;//Dimensions.get('window').height - keyboardHeight - spacing;
     this.setEditorHeight(editorAvailableHeight);
   }
 
@@ -210,7 +210,7 @@ export default class RichTextEditor extends Component {
         >
           <View style={styles.modal}>
             <View style={[styles.innerModal, {marginBottom: PlatformIOS ? this.state.keyboardHeight : 0}]}>
-              <Text style={styles.inputTitle}>Title</Text>
+              <Text style={styles.inputTitle}>标题</Text>
               <View style={styles.inputWrapper}>
                 <TextInput
                     style={styles.input}
