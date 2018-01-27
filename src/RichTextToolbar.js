@@ -21,7 +21,7 @@ function getDefaultIcon() {
   texts[actions.insertBulletsList] = require('../img/icon_format_ul.png');
   texts[actions.insertOrderedList] = require('../img/icon_format_ol.png');
   texts[actions.insertLink] = require('../img/icon_format_link.png');
-  texts[actions.closeKeyboard] = require('../img/icon_format_down.png');
+  texts[actions.closeKeyboard] = require('../img/icon_format_keyboard.png');
   return texts;
 }
 
@@ -182,6 +182,8 @@ export default class RichTextToolbar extends Component {
         }
         break;
       case actions.closeKeyboard:
+        this.state.editor.blurTitleEditor()
+        this.state.editor.blurContentEditor()
         Keyboard.dismiss();
         break;
     }
